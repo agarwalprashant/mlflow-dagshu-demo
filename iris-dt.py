@@ -7,7 +7,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.tree import DecisionTreeClassifier
 
-mlflow.set_tracking_uri('http://127.0.0.1:5000')
+import dagshub
+dagshub.init(repo_owner='agarwalprashant', repo_name='mlflow-dagshu-demo', mlflow=True)
+
+mlflow.set_tracking_uri('https://dagshub.com/agarwalprashant/mlflow-dagshu-demo.mlflow')
 
 # Load the Iris dataset
 iris = load_iris()
